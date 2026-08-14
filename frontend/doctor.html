@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VaaniDoc - Doctor Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            🩺 VaaniDoc
+        </div>
+
+        <div id="clockDisplay" class="clock-display">--</div>
+
+        <a href="index.html" class="doctor-link">
+            Patient Intake
+        </a>
+
+    </header>
+
+
+    <main class="dashboard-container">
+
+        <section class="dashboard-header">
+
+            <div>
+
+                <h1>Doctor Dashboard</h1>
+
+                <p>
+                    Review patient intake information.
+                </p>
+
+            </div>
+
+            <div class="status" id="liveStatus">
+                ● Live
+            </div>
+
+        </section>
+
+        <section class="dashboard-layout">
+
+            <aside class="session-list-panel">
+
+                <h3>Active Sessions</h3>
+                <p class="small-note">Sessions auto-expire and are deleted after inactivity.</p>
+
+                <div id="sessionList" class="session-list">
+                    <p class="empty-state">No active sessions yet.</p>
+                </div>
+
+            </aside>
+
+            <section class="patient-card" id="patientCard">
+
+                <div class="patient-header">
+
+                    <div>
+
+                        <p class="small-title">
+                            PATIENT
+                        </p>
+
+                        <h2 id="patientId">
+                            No session selected
+                        </h2>
+
+                        <p class="small-note" id="sessionTiming">-</p>
+
+                    </div>
+
+                    <div class="language-badge" id="languageBadge">
+                        -
+                    </div>
+
+                </div>
+
+
+                <div class="information-grid">
+
+                    <div class="information-box">
+
+                        <span>Entry Time</span>
+
+                        <strong id="infoEntryTime">-</strong>
+
+                    </div>
+
+
+                    <div class="information-box">
+
+                        <span>Original Language</span>
+
+                        <strong id="infoLanguage">-</strong>
+
+                    </div>
+
+
+                    <div class="information-box">
+
+                        <span>Duration</span>
+
+                        <strong id="infoDuration">-</strong>
+
+                    </div>
+
+
+                    <div class="information-box">
+
+                        <span>Extracted Symptoms</span>
+
+                        <strong id="infoSymptoms">-</strong>
+
+                    </div>
+
+
+                    <div class="information-box">
+
+                        <span>Severity</span>
+
+                        <strong id="infoSeverity">-</strong>
+
+                    </div>
+
+
+                    <div class="information-box">
+
+                        <span>Symptom Category</span>
+
+                        <strong id="infoCategory">-</strong>
+
+                    </div>
+
+
+                    <div class="information-box">
+
+                        <span>Status</span>
+
+                        <strong id="infoStatus">-</strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-section">
+
+                    <h3>
+                        AI-Generated Intake Summary
+                    </h3>
+
+                    <p id="infoSummary">
+                        Select a session from the left to view details.
+                    </p>
+
+                </div>
+
+
+                <div class="doctor-actions">
+
+                    <button class="primary-action" id="reviewButton" disabled>
+                        Mark as Reviewed
+                    </button>
+
+                    <button class="secondary-action" id="endSessionButton" disabled>
+                        End Session (Delete Data)
+                    </button>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <section class="privacy-card">
+
+            <h3>
+                🔒 Privacy Protection
+            </h3>
+
+            <p>
+                Patient information is held only in memory for the active
+                session and is permanently deleted when the session ends or
+                expires. No names, phone numbers, or other identifying
+                details are collected — sessions are referenced only by a
+                randomly generated Session ID.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            VaaniDoc © 2026
+        </p>
+
+        <p>
+            Privacy-first health intake
+        </p>
+
+    </footer>
+
+    <script src="doctor.js"></script>
+
+</body>
+
+</html>

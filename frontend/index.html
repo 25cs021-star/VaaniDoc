@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VaaniDoc - Patient Intake</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            🩺 VaaniDoc
+        </div>
+
+        <div id="clockDisplay" class="clock-display">--</div>
+
+        <a href="doctor.html" class="doctor-link">
+            Doctor Dashboard
+        </a>
+
+    </header>
+
+
+    <main class="patient-container">
+
+        <section class="welcome-section">
+
+            <h1>Tell us how you feel</h1>
+
+            <p>
+                Speak or type your symptoms in your preferred language.
+            </p>
+
+        </section>
+
+
+        <section class="intake-card">
+
+            <label for="language">
+                Select your language
+            </label>
+
+            <select id="language">
+
+                <option value="English">English</option>
+                <option value="Hindi">हिन्दी(Hindi)</option>
+                <option value="Gujarati">ગુજરાતી(Gujarati)</option>
+                <option value="Marathi">मराठी(Marathi)</option>
+                <option value="Bengali">বাংলা(Bengali)</option>
+                <option value="Tamil">தமிழ்(Tamil)</option>
+                <option value="Telugu">తెలుగు(Telugu)</option>
+                <option value="Kannada">ಕನ್ನಡ(Kannada)</option>
+                <option value="Malayalam">മലയാളം(Malayalam)</option>
+                <option value="Punjabi">ਪੰਜਾਬੀ(Punjabi)</option>
+
+            </select>
+
+
+            <label for="symptoms">
+                Describe your symptoms
+            </label>
+
+            <textarea
+                id="symptoms"
+                placeholder="Example: I have fever and headache for two days..."
+            ></textarea>
+
+
+            <div class="voice-section">
+
+                <button id="voiceButton" class="voice-button">
+                    🎤 Speak
+                </button>
+
+                <span id="voiceStatus">
+                    Tap to speak
+                </span>
+
+            </div>
+
+
+            <button id="submitButton" class="submit-button">
+                Continue
+            </button>
+
+        </section>
+
+        <p id="statusBanner" class="status-banner hidden"></p>
+
+
+        <section id="resultSection" class="result-section hidden">
+
+            <h2>Preliminary Intake</h2>
+
+            <div class="result-card">
+
+                <div class="result-row">
+                    <span>Session ID</span>
+                    <strong id="sessionIdDisplay">-</strong>
+                </div>
+
+                <div class="result-row">
+                    <span>Language</span>
+                    <strong id="resultLanguage">-</strong>
+                </div>
+
+                <div class="result-row">
+                    <span>Symptoms</span>
+                    <strong id="resultSymptoms">-</strong>
+                </div>
+
+                <div class="result-row">
+                    <span>Duration</span>
+                    <strong id="resultDuration">-</strong>
+                </div>
+
+                <div class="result-row">
+                    <span>Category</span>
+                    <strong id="resultCategory">-</strong>
+                </div>
+
+
+                <div class="summary-box">
+                    <span>AI Clinical Summary</span>
+                    <p id="resultSummary">-</p>
+                </div>
+
+            </div>
+
+
+            <p class="disclaimer">
+                This system provides intake assistance only.
+                It does not provide a medical diagnosis.
+                Please consult a qualified healthcare professional.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            VaaniDoc © 2026
+        </p>
+
+        <p>
+            Privacy-first health intake
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
