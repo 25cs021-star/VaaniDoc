@@ -1,6 +1,6 @@
 // VaaniDoc - Doctor Dashboard logic
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://vaanidoc-vwtv.onrender.com";
 const POLL_INTERVAL_MS = 3000;
 
 const sessionListEl = document.getElementById("sessionList");
